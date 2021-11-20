@@ -1,4 +1,4 @@
-FROM steamcmd:latest
+FROM emukaj/steamcmd:latest
 
 COPY --chown=steam:steam entrypoint.sh /
 COPY --chown=steam:steam start_server.sh ${HOMEDIR}
