@@ -29,7 +29,7 @@ else
     sed "s/MaxPlayers\=4/MaxPlayers=$MAXPLAYERS/" -i "${HOMEDIR}/Game.ini"
 fi
 
-if ! [[ -d ${GAMECONFIG}/Config/LinuxServer ]]
+if ! [[ -d ${GAMECONFIG}/Config/LinuxServer ]]; then
     printf "Creating game config directory \\n"
     mkdir -p "${GAMECONFIG}/Config/LinuxServer"
 
