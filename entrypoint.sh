@@ -24,11 +24,6 @@ if [[ "$EXPERIMENTAL" == "true" ]]; then
     EXP_FLAG=" -beta experimental"
 fi
 
-# if [[ "$USERID" -ne "0" ]]; then
-#     printf "Current user is not running as root \\n Set PUID and PGID in environment variables"
-#     exit 1
-# fi
-
 if ! [ -d ${GAMEDIR}/Engine ]; then
     printf "Game not found, downloading....\\n\\n"
 

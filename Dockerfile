@@ -1,12 +1,13 @@
 FROM emukaj/steamcmd:latest
 
 COPY --chown=steam:steam entrypoint.sh /
-COPY --chown=steam:steam start_server.sh ${HOMEDIR}
+COPY --chown=steam:steam start_server.sh Engine.ini Game.ini Scalability.ini ${HOMEDIR}
 
 ENV CONFIGDIR="/config" \
     GAMEDIR="/config/satisfactory" \
     SAVEDIR="/config/saves" \
     GAMESAVEDIR="${HOMEDIR}/.config/Epic/FactoryGame/Saved/SaveGames" \
+    GAMECONFIG="/config/satisfactory/FactoryGame/Saved" \
     COPYSAVE="false" \
     APPID="1690800" \
     EXPERIMENTAL="true" \
